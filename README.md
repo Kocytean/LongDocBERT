@@ -1,6 +1,6 @@
 # BERT for document classification
 
-Pure Python TF-IDF text classifier
+Using PyTorch and Transformers library.
 
 ## Prerequisites
 
