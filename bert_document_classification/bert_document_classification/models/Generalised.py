@@ -1,7 +1,7 @@
 from ..document_bert import BertForDocumentClassification
 from .util import get_model_path
 class Classifier(BertForDocumentClassification):
-    def __init__(self, labels, device='cuda', batch_size=10, model_name="doc_lstm"):
+    def __init__(self, labels, device='cuda', batch_size=10, model_name="doc_lstm",architecture='DocumentBertLSTM'):
         model_path = get_model_path(model_name)
 
         self.labels = labels
@@ -10,7 +10,7 @@ class Classifier(BertForDocumentClassification):
                          batch_size=batch_size,
                          bert_batch_size=7,
                          bert_model_path=model_path,
-                         architecture='DocumentBertLSTM',
+                         architecture=architecture,
                          labels=self.labels)
         
         
