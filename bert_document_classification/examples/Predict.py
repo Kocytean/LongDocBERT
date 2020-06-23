@@ -12,7 +12,7 @@ if __name__ == "__main__":
     p = configargparse.ArgParser(default_config_files=["conf.ini"])
     trainArgs = _initialize_arguments(p, mode='test')
     labels = trainArgs.labels
-    Bert = Classifier(labels=labels, model_name="./results_test/run_2020_06_21_10_15_48_LAPTOP-82Q9GTO7/checkpoint_2", device='cpu') #CPU prediction (change to 'cuda' if possible)
+    Bert = Classifier(labels=labels, model_name="./results_test/run_2020_06_21_10_15_48_LAPTOP-82Q9GTO7/checkpoint_2", architecture = trainArgs.architecture, device='cpu') #CPU prediction (change to 'cuda' if possible)
     print('Init Complete')
     test_documents, test_labels = [],[]
     for _, text, status in generate('TEST'):
