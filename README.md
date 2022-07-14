@@ -1,8 +1,11 @@
 # BERT for document classification
 
 BERT for classifying arbitrarily long input text (limited to 10200 tokens) 
+
 Based on Andriy Mulyar's repo 'BERT Long Document Classification'
+
 Token limit can be modified in function encode_documents in bert_document_classification/bert_document_classification/document_bert.py 
+
 ## Prerequisites
 
 torch, transformers, pandas, configargparse, sklearn
